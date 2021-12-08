@@ -16,7 +16,7 @@ function createMap(){
     var button = document.getElementById('currentLocation');
     var request = {
         location: {lat: 40.7678,lng:-73.9718},
-        radius: 2000,
+        radius: 800,
         keyword: 'restroom'
     };
 
@@ -43,7 +43,7 @@ function createMap(){
           return;
         service.nearbySearch({
             location: p.geometry.location,
-            radius: 2000,
+            radius: 800,
             keyword: 'restroom '
         }, callback);
         markers.push(new google.maps.Marker({
@@ -164,7 +164,7 @@ function getCurrentLocation(){
             infoWindow.open(map);
             service.nearbySearch({
                 location: position,
-                radius: 2000,
+                radius: 800,
                 keyword: 'restroom'
             }, callback);
         }, function(){
