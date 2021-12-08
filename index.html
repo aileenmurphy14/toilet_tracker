@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Map</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style = "margin:0">
+        <div class = "container">
+            <div class = "left">
+                <h1 class = "pageHeader">Toilet Tracker</h1>
+                <input class = "form-control" id = "search" type = "text" placeholder = "Search..."/>
+                <img id = "currentLocation" src = "./current2.png"/>
+                <div class = "locations">
+                <ol id = "list"></ol>
+                </div>
+            </div>
+            <div class = "right">
+                <div id = "map"></div>
+            </div>
+        </div>
+
+        <!--Google Maps scripts-->
+        <script src="script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr26oPesCRPpiKJuOiiob7Ng0EyGvX0hE&callback=createMap&libraries=places,geometry" async defer></script>
+    </body>
+</html>
